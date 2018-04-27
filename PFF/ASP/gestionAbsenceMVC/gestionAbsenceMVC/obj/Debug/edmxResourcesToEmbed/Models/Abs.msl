@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GesAbsModel5StoreContainer" CdmEntityContainer="GesAbsEntities5">
+    <EntitySetMapping Name="Absences">
+      <EntityTypeMapping TypeName="GesAbsModel5.Absence">
+        <MappingFragment StoreEntitySet="Absence">
+          <ScalarProperty Name="id_A" ColumnName="id_A" />
+          <ScalarProperty Name="DateA" ColumnName="DateA" />
+          <ScalarProperty Name="type_Ab" ColumnName="type_Ab" />
+          <ScalarProperty Name="id_S" ColumnName="id_S" />
+          <ScalarProperty Name="id_P" ColumnName="id_P" />
+          <ScalarProperty Name="justf" ColumnName="justf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

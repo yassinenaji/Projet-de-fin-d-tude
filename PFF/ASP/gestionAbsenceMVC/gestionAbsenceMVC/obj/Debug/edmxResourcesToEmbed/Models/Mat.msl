@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GesAbsModel2StoreContainer" CdmEntityContainer="GesAbsEntities2">
+    <EntitySetMapping Name="matieres">
+      <EntityTypeMapping TypeName="GesAbsModel2.matiere">
+        <MappingFragment StoreEntitySet="matiere">
+          <ScalarProperty Name="id_M" ColumnName="id_M" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

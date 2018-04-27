@@ -1,0 +1,75 @@
+﻿@model IEnumerable<gestionAbsenceMVC.Models.Absence>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2> Absence </h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="form-horizontal">
+    @using (Html.BeginForm("Index", "Absences", FormMethod.Get))
+    {<b>search by :</b>
+        @Html.RadioButton("searchBy", "NameT", true)<text>  Name of trainee     </text>
+        @Html.RadioButton("searchBy", "Date")       <text>         Date         </text>
+        @Html.RadioButton("searchBy", "NameP")      <text>   Name of Professor  </text>
+        @Html.RadioButton("searchBy", "Jus")        <text>     Justification    </text>
+        @Html.RadioButton("searchBy", "Tyabs")      <text>   type of absence    </text>
+
+
+        <p>
+            @Html.TextBox("search")  <input type="submit" value="search" />
+        </p>
+    }
+    
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type_Ab)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.justf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prof.nom_P)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stagiare.nom_S)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type_Ab)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.justf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prof.nom_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stagiare.nom_S)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_A }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_A }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_A })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,15 @@
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\bin\Debug\GesAbs.mdf
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\bin\Debug\GesAbs_log.ldf
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\bin\Debug\Gestion_D_absence.exe.config
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\bin\Debug\Gestion_D_absence.exe
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\bin\Debug\Gestion_D_absence.pdb
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.Form1.resources
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.Properties.Resources.resources
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.csproj.GenerateResource.cache
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.csproj.CoreCompileInputs.cache
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.exe
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.pdb
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.SG.resources
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.Absence.resources
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.csprojResolveAssemblyReference.cache
+D:\sam\project\PFF\Gestion_D_absence\Gestion_D_absence\obj\Debug\Gestion_D_absence.INFO.resources

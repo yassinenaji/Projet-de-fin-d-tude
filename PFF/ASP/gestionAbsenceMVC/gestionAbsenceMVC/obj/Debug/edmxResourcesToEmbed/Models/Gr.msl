@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GesAbsModel1StoreContainer" CdmEntityContainer="GesAbsEntities1">
+    <EntitySetMapping Name="Groupes">
+      <EntityTypeMapping TypeName="GesAbsModel1.Groupe">
+        <MappingFragment StoreEntitySet="Groupe">
+          <ScalarProperty Name="id_G" ColumnName="id_G" />
+          <ScalarProperty Name="nom_G" ColumnName="nom_G" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

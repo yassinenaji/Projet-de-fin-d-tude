@@ -1,0 +1,50 @@
+﻿@model gestionAbsenceMVC.Models.Stagiare
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stagiare</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenom_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenom_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexe_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexe_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Groupe.nom_G)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Groupe.nom_G)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_S }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

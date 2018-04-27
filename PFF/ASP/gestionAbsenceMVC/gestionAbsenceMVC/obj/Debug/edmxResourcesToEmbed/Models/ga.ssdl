@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GesAbsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Absence">
+    <Key>
+      <PropertyRef Name="id_A" />
+    </Key>
+    <Property Name="id_A" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateA" Type="date" />
+    <Property Name="type_Ab" Type="varchar" MaxLength="50" />
+    <Property Name="id_S" Type="int" />
+    <Property Name="id_P" Type="int" />
+    <Property Name="justf" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="Groupe">
+    <Key>
+      <PropertyRef Name="id_G" />
+    </Key>
+    <Property Name="id_G" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_G" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="matiere">
+    <Key>
+      <PropertyRef Name="id_M" />
+    </Key>
+    <Property Name="id_M" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Prof">
+    <Key>
+      <PropertyRef Name="id_P" />
+    </Key>
+    <Property Name="id_P" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_P" Type="varchar" MaxLength="20" />
+    <Property Name="prenom_P" Type="varchar" MaxLength="20" />
+    <Property Name="sexe_P" Type="varchar" MaxLength="20" />
+    <Property Name="id_M" Type="int" />
+  </EntityType>
+  <EntityType Name="Stagiare">
+    <Key>
+      <PropertyRef Name="id_S" />
+    </Key>
+    <Property Name="id_S" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_S" Type="varchar" MaxLength="20" />
+    <Property Name="prenom_S" Type="varchar" MaxLength="20" />
+    <Property Name="sexe_S" Type="varchar" MaxLength="20" />
+    <Property Name="id_G" Type="int" />
+  </EntityType>
+  <Association Name="FK__Absence__id_P__1B0907CE">
+    <End Role="Prof" Type="Self.Prof" Multiplicity="0..1" />
+    <End Role="Absence" Type="Self.Absence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prof">
+        <PropertyRef Name="id_P" />
+      </Principal>
+      <Dependent Role="Absence">
+        <PropertyRef Name="id_P" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Absence__id_S__1A14E395">
+    <End Role="Stagiare" Type="Self.Stagiare" Multiplicity="0..1" />
+    <End Role="Absence" Type="Self.Absence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stagiare">
+        <PropertyRef Name="id_S" />
+      </Principal>
+      <Dependent Role="Absence">
+        <PropertyRef Name="id_S" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prof__id_M__173876EA">
+    <End Role="matiere" Type="Self.matiere" Multiplicity="0..1" />
+    <End Role="Prof" Type="Self.Prof" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="matiere">
+        <PropertyRef Name="id_M" />
+      </Principal>
+      <Dependent Role="Prof">
+        <PropertyRef Name="id_M" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stagiare__id_G__1273C1CD">
+    <End Role="Groupe" Type="Self.Groupe" Multiplicity="0..1" />
+    <End Role="Stagiare" Type="Self.Stagiare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groupe">
+        <PropertyRef Name="id_G" />
+      </Principal>
+      <Dependent Role="Stagiare">
+        <PropertyRef Name="id_G" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GesAbsModelStoreContainer">
+    <EntitySet Name="Absence" EntityType="Self.Absence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Groupe" EntityType="Self.Groupe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="matiere" EntityType="Self.matiere" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prof" EntityType="Self.Prof" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stagiare" EntityType="Self.Stagiare" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Absence__id_P__1B0907CE" Association="Self.FK__Absence__id_P__1B0907CE">
+      <End Role="Prof" EntitySet="Prof" />
+      <End Role="Absence" EntitySet="Absence" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Absence__id_S__1A14E395" Association="Self.FK__Absence__id_S__1A14E395">
+      <End Role="Stagiare" EntitySet="Stagiare" />
+      <End Role="Absence" EntitySet="Absence" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prof__id_M__173876EA" Association="Self.FK__Prof__id_M__173876EA">
+      <End Role="matiere" EntitySet="matiere" />
+      <End Role="Prof" EntitySet="Prof" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stagiare__id_G__1273C1CD" Association="Self.FK__Stagiare__id_G__1273C1CD">
+      <End Role="Groupe" EntitySet="Groupe" />
+      <End Role="Stagiare" EntitySet="Stagiare" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

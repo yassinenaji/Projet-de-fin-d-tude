@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GesAbsModel4.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Prof">
+    <Key>
+      <PropertyRef Name="id_P" />
+    </Key>
+    <Property Name="id_P" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_P" Type="varchar" MaxLength="20" />
+    <Property Name="prenom_P" Type="varchar" MaxLength="20" />
+    <Property Name="sexe_P" Type="varchar" MaxLength="20" />
+    <Property Name="id_M" Type="int" />
+  </EntityType>
+  <EntityContainer Name="GesAbsModel4StoreContainer">
+    <EntitySet Name="Prof" EntityType="Self.Prof" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

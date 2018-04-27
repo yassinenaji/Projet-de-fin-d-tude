@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GesAbsModel5.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Absence">
+    <Key>
+      <PropertyRef Name="id_A" />
+    </Key>
+    <Property Name="id_A" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateA" Type="date" />
+    <Property Name="type_Ab" Type="varchar" MaxLength="50" />
+    <Property Name="id_S" Type="int" />
+    <Property Name="id_P" Type="int" />
+    <Property Name="justf" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityContainer Name="GesAbsModel5StoreContainer">
+    <EntitySet Name="Absence" EntityType="Self.Absence" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

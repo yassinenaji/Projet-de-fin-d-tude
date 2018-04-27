@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GesAbsModel6StoreContainer" CdmEntityContainer="GesAbsEntities6">
+    <EntitySetMapping Name="Absences">
+      <EntityTypeMapping TypeName="GesAbsModel6.Absence">
+        <MappingFragment StoreEntitySet="Absence">
+          <ScalarProperty Name="id_A" ColumnName="id_A" />
+          <ScalarProperty Name="DateA" ColumnName="DateA" />
+          <ScalarProperty Name="type_Ab" ColumnName="type_Ab" />
+          <ScalarProperty Name="id_S" ColumnName="id_S" />
+          <ScalarProperty Name="id_P" ColumnName="id_P" />
+          <ScalarProperty Name="justf" ColumnName="justf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groupes">
+      <EntityTypeMapping TypeName="GesAbsModel6.Groupe">
+        <MappingFragment StoreEntitySet="Groupe">
+          <ScalarProperty Name="id_G" ColumnName="id_G" />
+          <ScalarProperty Name="nom_G" ColumnName="nom_G" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="matieres">
+      <EntityTypeMapping TypeName="GesAbsModel6.matiere">
+        <MappingFragment StoreEntitySet="matiere">
+          <ScalarProperty Name="id_M" ColumnName="id_M" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profs">
+      <EntityTypeMapping TypeName="GesAbsModel6.Prof">
+        <MappingFragment StoreEntitySet="Prof">
+          <ScalarProperty Name="id_P" ColumnName="id_P" />
+          <ScalarProperty Name="nom_P" ColumnName="nom_P" />
+          <ScalarProperty Name="prenom_P" ColumnName="prenom_P" />
+          <ScalarProperty Name="sexe_P" ColumnName="sexe_P" />
+          <ScalarProperty Name="id_M" ColumnName="id_M" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stagiares">
+      <EntityTypeMapping TypeName="GesAbsModel6.Stagiare">
+        <MappingFragment StoreEntitySet="Stagiare">
+          <ScalarProperty Name="id_S" ColumnName="id_S" />
+          <ScalarProperty Name="nom_S" ColumnName="nom_S" />
+          <ScalarProperty Name="prenom_S" ColumnName="prenom_S" />
+          <ScalarProperty Name="sexe_S" ColumnName="sexe_S" />
+          <ScalarProperty Name="id_G" ColumnName="id_G" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

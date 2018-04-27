@@ -1,0 +1,58 @@
+﻿@model gestionAbsenceMVC.Models.Absence
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Absence</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type_Ab)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type_Ab)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.justf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.justf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prof.nom_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prof.nom_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stagiare.nom_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stagiare.nom_S)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_A }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GesAbsModel4StoreContainer" CdmEntityContainer="GesAbsEntities4">
+    <EntitySetMapping Name="Profs">
+      <EntityTypeMapping TypeName="GesAbsModel4.Prof">
+        <MappingFragment StoreEntitySet="Prof">
+          <ScalarProperty Name="id_P" ColumnName="id_P" />
+          <ScalarProperty Name="nom_P" ColumnName="nom_P" />
+          <ScalarProperty Name="prenom_P" ColumnName="prenom_P" />
+          <ScalarProperty Name="sexe_P" ColumnName="sexe_P" />
+          <ScalarProperty Name="id_M" ColumnName="id_M" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
